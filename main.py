@@ -8,6 +8,15 @@ def encode(password):
 
     return encoded_password
 
+def decode(encoded_password):
+    decoded_password = ""
+
+    for digit in encoded_password:
+        decoded_digit = str(int(digit) - 3)
+        decoded_password += decoded_digit
+
+    return decoded_password
+
 def main():
     while True:
         print("1. Encode Password")
